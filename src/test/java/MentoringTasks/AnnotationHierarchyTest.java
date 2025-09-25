@@ -1,4 +1,4 @@
-package tasks;
+package MentoringTasks;
 /*
         AnnotationHierarchyTest
         Task 1: Basic TestNG Setup and Annotations

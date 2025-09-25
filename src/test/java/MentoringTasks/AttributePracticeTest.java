@@ -1,4 +1,4 @@
-package tasks;
+package MentoringTasks;
 
 import org.testng.annotations.Test;
 

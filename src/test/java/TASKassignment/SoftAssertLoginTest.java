@@ -1,4 +1,4 @@
-package TASK;
+package TASKassignment;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
