@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression">
-    <test name="Annotations Test">
+<suite name="AllGroupsSuite">
+
+    <test name="SmokeTests">
+        <parameter name="searchKeyword" value="java"/>
         <groups>
             <run>
-
-                <include name="smokeTest"> </include>
+                <include name="smoke"/>
             </run>
         </groups>
         <classes>
-            <class name="TASKassignment.AmazonGroupTest"> </class>
-
+            <class name="TASKassignment.AmazonGroupTest"/>
         </classes>
+    </test>
 
+    <test name="RegressionTests">
+        <parameter name="searchKeyword" value="selenium"/>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TASKassignment.AmazonGroupTest"/>
+        </classes>
     </test>
 
 </suite>
