@@ -26,4 +26,16 @@
         </classes>
     </test>
 
+    <test name="ApiTests">
+        <parameter name="searchKeyword" value="rest api"/>
+        <groups>
+            <run>
+                <include name="api"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TASKassignment.AmazonGroupTest"/>
+        </classes>
+    </test>
+
 </suite>
