@@ -1,0 +1,19 @@
+<suite name="Suite1">
+    <test name="test1">
+        <groups>
+            <run>
+                <include name="A"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.C07_Groups">
+                <methods>
+                    <!-- Exclude a specific method from the class -->
+                    <exclude name="test05"> </exclude>
+                </methods>
+
+            </class>
+            <class name="tests.C02_Priority"> </class>
+        </classes>
+    </test>
+</suite>

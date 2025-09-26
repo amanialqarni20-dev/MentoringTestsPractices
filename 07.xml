@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/amani/IdeaProjects/TestMentoringPractice/src/test/java/tests">
+        <classes>
+            <class name="tests.C01_Annotations">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test04"/>
+                    <include name="test05"/>
+                </methods>
+            </class>
+            <class name="tests.C02_Priority">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test03"/>
+                    <include name="test04"/>
+                    <include name="test05"/>
+                    <include name="setUp"/>
+                </methods>
+            </class>
+            <class name="tests.C03_Enabled">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test04"/>
+                    <include name="test05"/>
+                </methods>
+            </class>
+            <class name="tests.C04_TimeOut">
+                <methods>
+                    <include name="loginTest"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test04"/>
+                    <include name="test05"/>
+                </methods>
+            </class>
+            <class name="tests.C05_SwagLabsTimeOut">
+                <methods>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
+            <class name="tests.C06_Description">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test04"/>
+                    <include name="test05"/>
+                </methods>
+            </class>
+            <class name="tests.C07_Groups">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test05"/>
+                    <include name="test06"/>
+                    <include name="test07"/>
+                </methods>
+            </class>
+            <class name="tests.C08_DependsOnMethod">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test05"/>
+                    <include name="test06"/>
+                </methods>
+            </class>
+            <class name="tests.C09_DependsOnMethodTest">
+                <methods>
+                    <include name="facebookTest"/>
+                    <include name="googleTest"/>
+                </methods>
+            </class>
+            <class name="tests.C10_DependsOnGroups">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test04"/>
+                    <include name="test05"/>
+                    <include name="test06"/>
+                    <include name="dependsOnGroup3"/>
+                    <include name="dependsOnGroup1"/>
+                </methods>
+            </class>
+            <class name="tests.C11_Assertions">
+                <methods>
+                    <include name="hardAssertionTest"/>
+                    <include name="softAssertionTest"/>
+                </methods>
+            </class>
+            <class name="tests.C12_SoftAssertion">
+                <methods>
+                    <include name="hardAssertionTest"/>
+                    <include name="softAssertionTest"/>
+                </methods>
+            </class>
+            <class name="tests.SampleTest">
+                <methods>
+                    <include name="myTest"/>
+                </methods>
+            </class>
+            <class name="tests.test01">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test04"/>
+                    <include name="test05"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

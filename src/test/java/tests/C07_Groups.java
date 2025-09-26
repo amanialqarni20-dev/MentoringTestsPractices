@@ -26,7 +26,7 @@ public class C07_Groups {
         System.out.println("Test 03");
     }
 
-    @Test(groups = "B")
+    @Test(groups = {"B", "A"})
     void test04() {
         System.out.println("Test 04 - B");
     }

@@ -16,7 +16,7 @@ public class C02_Priority {
         System.out.println("Test 01");
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1 , groups = {"A","B"})
     void test02(){
         System.out.println("Test 02");
     }
@@ -31,7 +31,7 @@ public class C02_Priority {
         System.out.println("Test 04");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4 ,groups = "A")
     void test05(){
         System.out.println("Test 05");
     }
