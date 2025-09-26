@@ -1,6 +1,5 @@
 package utilities;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -8,23 +7,22 @@ import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
-
 public abstract class TestBase {
 
-    protected WebDriver driver;
+    public WebDriver driver;
 
     @BeforeMethod
-    void setUp() {
+    public void setUp() {   //  public
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @AfterMethod
-    void tearDown() throws InterruptedException {
+    public void tearDown() throws InterruptedException {   //  public
         Thread.sleep(3000);
-        driver.quit();
+        if (driver != null) {
+            driver.quit();
+        }
     }
-
-
 }

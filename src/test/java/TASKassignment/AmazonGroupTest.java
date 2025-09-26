@@ -53,7 +53,7 @@ public class AmazonGroupTest {
 
     @Test(groups = "api")
     public void apiTest() {
-        // Example API test (no browser needed)
+
         Assert.assertTrue(true, "API test passed");
     }
 

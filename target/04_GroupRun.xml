@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression">
-    <test name="Annotations Test">
+<suite name="My Suite">
+    <test name="Group Test1">
         <groups>
             <run>
 
-                <include name="smokeTest"> </include>
+                <include name="A"> </include>
             </run>
         </groups>
         <classes>
-            <class name="tests.C05_SwagLabsTimeOut"> </class>
-            <class name="tests.C12_SoftAssertion"> </class>
+            <class name="tests.C07_Groups"> </class>
+
         </classes>
 
     </test>
