@@ -21,7 +21,7 @@ public class C12_SoftAssertion extends TestBase {
         Verify error message text is Your username is invalid!
      */
 
-    @Test
+    @Test (groups = "SmokeTest")
     void hardAssertionTest() {
         ActionHelper actionHelper = new ActionHelper(driver);
 
@@ -47,7 +47,7 @@ public class C12_SoftAssertion extends TestBase {
         Assert.assertEquals(actionHelper.getText(error), "Your username is invalid!", "Messages did not match!");
     }
 
-    @Test
+    @Test (groups = "SmokeTest")
     void softAssertionTest() {
         ActionHelper actionHelper = new ActionHelper(driver);
 //        Open page https://practicetestautomation.com/practice-test-login/
