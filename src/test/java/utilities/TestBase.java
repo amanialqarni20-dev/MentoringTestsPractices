@@ -1,28 +1,53 @@
 package utilities;
 
+
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.*;
 
 import java.time.Duration;
+
 
 public abstract class TestBase {
 
     public WebDriver driver;
 
     @BeforeMethod
-    public void setUp() {   //  public
-        driver = new ChromeDriver();
+    @Parameters("browser")
+    public void setUp(@Optional("chrome") String browser) {
+        switch (browser.toLowerCase()) {
+            case "firefox":
+                driver = new FirefoxDriver();
+                break;
+            case "edge":
+                driver = new EdgeDriver();
+                break;
+            default:
+                driver = new ChromeDriver();
+        }
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @AfterMethod
-    public void tearDown() throws InterruptedException {   //  public
+    public void tearDown() throws InterruptedException {
         Thread.sleep(3000);
-        if (driver != null) {
-            driver.quit();
-        }
+        driver.quit();
     }
+
+    @DataProvider(name = "Credentials")
+    public Object[][] getCredentials() {
+        return new Object[][]{
+                {"John", "John.123"},
+                {"Mary", "Mary.987"},
+                {"Tom", "Tom'+%&"},
+                {"Ken", "Ken.Pass"}
+        };
+    }
+
+
 }
