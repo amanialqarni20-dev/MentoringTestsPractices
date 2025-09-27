@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import utilities.TestBase;
 
-public class C16_DataProviderUtils extends TestBase {
+public class C17_DataProviderFaker extends TestBase {
     /*
     Go to https://testpages.eviltester.com/styled/basic-html-form-test.html
     Enter username using data provider utilities
@@ -15,7 +15,7 @@ public class C16_DataProviderUtils extends TestBase {
     Enter dropdown using data provider utilities
      */
 
-    @Test(dataProvider = "getRecords", dataProviderClass = utilities.DataProviderUtilities.class)
+    @Test(dataProvider = "faker", dataProviderClass = utilities.DataProviderUtilities.class)
     void dataProviderUtilsTest(String username, String password, String comment, String dropdown) {
 
 //        Go to https://testpages.eviltester.com/styled/basic-html-form-test.html
